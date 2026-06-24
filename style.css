@@ -1,0 +1,171 @@
+/* 让所有元素使用更容易理解的尺寸计算方式 */
+* {
+  box-sizing: border-box;
+}
+
+/* 点击导航链接时，页面平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 整个网页的基础样式 */
+body {
+  margin: 0;
+  color: #1f2937;
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+  line-height: 1.7;
+  background-color: #f8fafc;
+}
+
+/* 顶部欢迎区域 */
+.hero {
+  min-height: 100vh;
+  padding: 24px 8%;
+  color: white;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+/* 顶部导航栏 */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 网站名称 */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* 导航链接 */
+.nav-links a {
+  margin-left: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+/* 鼠标移动到导航链接上 */
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* 欢迎文字区域 */
+.hero-content {
+  max-width: 750px;
+  padding-top: 20vh;
+}
+
+/* 小标题 */
+.greeting {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+/* 最大的标题 */
+.hero h1 {
+  margin: 0;
+  font-size: clamp(48px, 9vw, 88px);
+  line-height: 1.1;
+}
+
+/* 自我介绍 */
+.introduction {
+  max-width: 600px;
+  margin: 24px 0;
+  font-size: 20px;
+}
+
+/* 按钮 */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  color: #2563eb;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+/* 鼠标放到按钮上时，按钮向上移动 */
+.button:hover {
+  transform: translateY(-3px);
+}
+
+/* 网页主要内容 */
+main {
+  width: min(1000px, 88%);
+  margin: 0 auto;
+}
+
+/* 每个内容区域 */
+.section {
+  padding: 80px 0;
+}
+
+/* 内容区域标题 */
+.section h2 {
+  margin-top: 0;
+  font-size: 36px;
+}
+
+/* 作品列表 */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* 作品卡片 */
+.card {
+  padding: 28px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 8%);
+}
+
+/* 卡片标题 */
+.card h3 {
+  margin-top: 0;
+}
+
+/* 联系方式中的链接 */
+#contact a {
+  color: #2563eb;
+}
+
+/* 页面底部 */
+footer {
+  padding: 32px;
+  color: #64748b;
+  text-align: center;
+  background-color: #e2e8f0;
+}
+
+/* 当屏幕宽度小于 650 像素时使用这些样式 */
+@media (max-width: 650px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 20px 6%;
+  }
+
+  .hero-content {
+    padding-top: 18vh;
+  }
+
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+}
+.avatar {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border: 4px solid white;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 20%);
+}
